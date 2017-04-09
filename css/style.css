@@ -1,0 +1,113 @@
+
+
+.bannierefond {
+	height: 60px;
+	background-color: #3F51B5;
+}
+
+.banniere {
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: -20px;
+}
+.sautblanc {
+	height: 15px;
+}
+
+.petitsautblanc {
+	height: 10px;
+}
+
+.banniere h1 {
+	padding-left: 56px;
+	color: #FFFFFF;
+	font-size: 24px;
+}
+
+input {
+	cursor: pointer;
+}
+
+#startTime, #endTime {
+	max-width: 64px;
+	text-align: center;
+}
+
+.testCol {
+	background-color: red;
+}
+
+h4, h3{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+
+
+
+#behavior {
+  width: 3.5em;
+}
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+th, td{
+  text-align: center;
+}
+
+.colOne {
+  text-align: left;
+}
+
+.icoCrit {
+  size: 50px;
+}
+
+.groupImg {
+  size:10px;
+}
+
+textarea {
+  min-width: 100%;
+}
+
+.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+
+a, a:focus{
+    color: #424242;
+    text-decoration: none;
+
+}
+a:hover {
+    color: #3F51B5;
+    text-decoration: none;
+}
