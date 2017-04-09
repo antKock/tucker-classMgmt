@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Test de Github -->
+	<TITLE>Tucker's Hub - Class Mgmt</TITLE>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified JQuery-->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
+
+	<!-- selectBootstrap -->
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<script src="js/bootstrap-select.js"></script>
+
+	<!-- timePicker -->
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+	<script src="js/jquery.timepicker.js"></script>
+	<script>
+		$(function() {
+		$('.scrollDefaultExample').timepicker({ 'scrollDefault': 'now','step': '60', 'timeFormat': 'G:i'});
+		});
+	</script>
+
+	<!-- datePicker -->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	  $( function() {
+	    $( "#datepicker" ).datepicker({'dateFormat':'dd/mm/yy'});
+	  } );
+	</script>
+
+	<!-- JavaScript Page -->
+
+		<script>
+		$(document).ready(function(){
+		$("#btnMoins").click(function(){
+			var Oldvalue = $("#behavior").val(function(n, c){
+				c -- ;
+				return c;
+
+			});
+		});
+
+		$("#btnPlus").click(function(){
+			var Oldvalue = $("#behavior").val(function(n, c){
+				c ++ ;
+				return c;
+			});
+		});
+		});
+		</script>
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Banniere du site-->
+		<div class="container-fluid bannierefond"> 
+		<div class="row">
+		<div class="col-md-12 banniere">
+		<h1 id="titre">Tucker's Hub - Class Mgmt</h1>
+		</div>
+		</div>
+
+		</div>
+
+
+	<!-- Formulaire complet-->
+	<div class="container-fluid">
+	<form class="form-inline">
+	<div class="row sautblanc"></div>
+	<div class="row">
+		<!-- Partie gauche -->
+		<div class="col-md-3 col-md-offset-1 form-group">
+			<!-- Class / Date -->
+			<div class="row">
+			<div class="col-md-12">
+				<div class="row petitsautblanc">	
+				</div>
+				
+				<div class="row">
+				<div class="col-md-4">
+				<div class="input-group">
+   					<span class="input-group-addon glyphicon glyphicon-user"></span>
+		    		<select class="selectpicker bootstrap-select form-control"  id="className">
+	 			 		<option value="1">6ème F</option>
+	 					<option value="2">5ème D</option>
+	 					<option value="3">3ème A</option>
+					</select>
+				</div>
+				</div>
+				
+				
+				<div class="col-md-5">
+				<div class="input-group">
+				<span class="input-group-addon glyphicon glyphicon-calendar"></span>
+				<input class="form-control" type="text" id="datepicker"/>
+				</div>
+				</div>
+
+				</div>
+				<div class="row petitsautblanc">	
+				</div>
+				<div class="row">
+				<div class="col-md-12">
+				
+				<div class="input-group">
+				<span class="input-group-addon glyphicon glyphicon-calendar"></span>
+				<input id="startTime" type="text" class="time scrollDefaultExample form-control" /> 
+
+				</div>
+				<span>to</span>
+				<input id="endTime" type="text" class="time scrollDefaultExample form-control" />	
+
+				</div>
+				
+				</div>
+
+			</div>
+			</div>
+			<div class="row sautblanc">	
+			</div>
+
+			<!-- Comments / Homework / Classwork -->
+			<div class="row">
+			<div class="col-md-12">
+			<div class="panel-group">
+				<div class="panel panel-default casier">
+	    			<div class="panel-heading tiroir">
+	      			<a data-toggle="collapse" href="#collapse1">
+	      			<h2 class="panel-title"><strong>Comments</strong></h2>
+	      			</a>
+	    			</div>
+	    			<div id="collapse1" class="panel-collapse collapse">
+	      			<div class="panel-body">
+		      			<div>
+		      			<h4>Last course</h4>
+		      			<p id="oldComment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra sed urna eu sodales. In felis velit, aliquam ut nisi vel, dignissim faucibus ex. Praesent laoreet in nibh quis condimentum. In sed. </p>
+		      			</div>
+		      			<div>
+		      			<h4>This course</h4>
+		      			<textarea class="form-control" id="newComment" rows="2"></textarea>
+		      			</div>
+	      			</div>
+	    			</div>
+
+	    			<div class="panel-heading tiroir">
+	      			<a data-toggle="collapse" href="#collapse2">
+	      			<h2 class="panel-title"><strong>Homework</strong></h2>
+	      			</a>
+	    			</div>
+	    			<div id="collapse2" class="panel-collapse collapse-in">
+	      			<div class="panel-body">
+		      			<div>
+		      			<h4>Last course</h4>
+		      			<p id="oldHomework">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra sed urna eu sodales. In felis velit, aliquam ut nisi vel, dignissim faucibus ex. Praesent laoreet in nibh quis condimentum. In sed.</p>
+		      			</div>
+		      			<div>
+		      			<h4>This course</h4>
+		      			<textarea class="form-control" rows="2" id="newHomework"></textarea>
+		      			</div>
+	      			</div>
+	    			</div>
+
+	    			<div class="panel-heading tiroir">
+	      			<a data-toggle="collapse" href="#collapse3">
+	      			<h2 class="panel-title"><strong>Classwork</strong></h2>
+	      			</a>
+	    			</div>
+	    			<div id="collapse3" class="panel-collapse collapse-in">
+	      			<div class="panel-body">
+		      			<div>
+		      			<h4>This course</h4>
+		      			<textarea class="form-control" id="newClasswork" rows="2"></textarea>
+		      			</div>
+	      			</div>
+	    			</div>
+  				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+
+		<!-- Partie droite  -->
+		<div class="col-md-6 col-md-offset-1 form-group">
+			<!-- Tableau -->
+				<div class="row">
+				<table class="table table-hover">
+		  		<thead> 
+		  		 <tr>
+		  			<th class="colOne">Student</th>
+		  			<th>Absent</th>
+		  			<th><img src="img/homeWork.png" class="icoCrit"></th>
+		  			<th>Classwork</th>
+		  			<th>Behavior</th>
+					<th>Role</th>
+		  		</tr>
+		  		</thead>
+		  		<tbody>
+		  		<tr>
+		  			<td class="colOne">Anthony Kocken</td>
+		  			<td><input id="isAbsent" type="checkbox" class="form-control" value=""></td>
+		  			<td><input id="homeworkDone" type="checkbox" class="form-control" value=""></td>
+		  			<td><input id="classworkDone" type="checkbox" class="form-control" value=""></td>
+		  			<td>
+       					<button class="btn btn-xs btnMoins" type="button" id="btnMoins" data-action="decrease">-</button>
+       					<input class="quantity form-control" type="text" value="0" id="behavior"/>
+      					<button class="btn btn-xs btnPlus" type="button" id="btnPlus" data-action="increase">+</button>
+		  			</td>
+		  			<td>
+		  				<select class="selectpicker form-control" id="roles" data-width="auto">
+	  						<option selected></option>
+	 			 			<option value="1">Pich</option>
+	 			 			<option value="2">Blackboard</option>
+	 			 			<option value="3">Carotte</option>
+						</select>
+					</td>
+		  		</tr>
+		  		
+		  		</tbody>
+				</table>
+				</div>
+
+			<!-- Boutons -->
+				<div class="row pull-right">
+				<button type="button" class="btn btn-warning btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+				<button type="submit" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button>
+				</div>
+
+
+	</div>
+	</div>
+
+	</form>
+
+  
+	</div>
+
+
+
+	
+	<!-- Ticket -->
+	
+	<!-- Fin Ticket -->
+
+	<!-- Boutons -->
+
+	<!-- Fin Boutons -->
+
+	<!-- Banniere du site -->
+	
+	<!-- Fin Banniere du site -->
+
+	<!-- Coeur du site -->
+	
+	<!-- Ticket -->
+	
+	<!-- Fin Ticket -->
+
+	<!-- Boutons -->
+
+	<!-- Fin Boutons -->
+
+
+</body>
+
+<footer>
+</footer>
+
+</html>
